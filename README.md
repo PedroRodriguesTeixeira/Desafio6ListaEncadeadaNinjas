@@ -1,2 +1,1 @@
-# Desafio6ListaEncadeadaNinjas
-Resolução do desafio 6 da trilha Java 10x sobre manipulação de LinkedLists.
+[desafio-6.pdf](https://github.com/user-attachments/files/31914654/desafio-6.pdf)
