@@ -9,34 +9,37 @@ public class Main {
 
         // Iniciar um LinkedList com 7 ninjas
         LinkedList<Ninja> listaDeNinjas = new LinkedList<Ninja>();
-        Ninja naruto = new Ninja("Vila da folha", "Naruto Uzumaki", 17);
-        Ninja sasuke = new Ninja("Vila da folha", "Sasuke Uchiha", 17);
-        Ninja sakura = new Ninja("Vila da folha", "Sakura Haruno", 17);
-        Ninja kakashi = new Ninja("Vila da folha", "Kakashi Hatake", 38);
-        Ninja jiraya = new Ninja("Vila da folha", "Jiraya", 57);
-        Ninja obito = new Ninja("Vila da folha", "Obito Uchiha", 37);
-        Ninja hinata = new Ninja("Vila da folha", "Hinata Hyuga", 17);
 
-        listaDeNinjas.add(naruto);
-        listaDeNinjas.add(sasuke);
-        listaDeNinjas.add(sakura);
-        listaDeNinjas.add(kakashi);
-        listaDeNinjas.add(jiraya);
-        listaDeNinjas.add(obito);
-        listaDeNinjas.add(hinata);
-
-        System.out.println("Lista de ninjas cadastradas:" + listaDeNinjas);
+        listaDeNinjas.add(new Ninja("Vila da folha", "Naruto Uzumaki", 17));
+        listaDeNinjas.add(new Ninja("Vila da folha", "Sasuke Uchiha", 17));
+        listaDeNinjas.add(new Ninja("Vila da folha", "Sakura Haruno", 17));
+        listaDeNinjas.add(new Ninja("Vila da folha", "Kakashi Hatake", 38));
+        listaDeNinjas.add(new Ninja("Vila da folha", "Jiraya", 57));
+        listaDeNinjas.add(new Ninja("Vila da folha", "Obito Uchiha", 37));
+        listaDeNinjas.add(new Ninja("Vila da folha", "Hinata Hyuga", 17));
 
 
         // Adicionar o ninja no início da lista
-        listaDeNinjas.addFirst(hinata);
-        listaDeNinjas.removeLast();
+        System.out.println("-----Adicionando no inicio da lista-----");
+        listaDeNinjas.addFirst(new Ninja("Vila da folha", "Boruto Uzumaki", 3));
+        System.out.println("listaDeNinjas = " + listaDeNinjas);
+        System.out.println();
 
+        //Remover o ninja no início da lista
+        System.out.println("-----Removendo no inicio da lista-----");
+        Ninja removido = listaDeNinjas.removeFirst();
+        System.out.println("Ninja removido foi: " + removido);
+        System.out.println();
 
         //Listar os ninjas
+        //Comexidade o(n)
+        System.out.println("-----Lista de ninjas------");
+
         for(Ninja n: listaDeNinjas) {
             System.out.println(n);
         }
+
+        System.out.println();
 
         //Procurar um ninja por indice
         for (int i = 0; i < listaDeNinjas.size(); i++) {
